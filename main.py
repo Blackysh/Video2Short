@@ -50,7 +50,7 @@ def vidSelectedButtons(video_duration):
     textbox1.place(relx=0.5, rely=0.35, anchor=tkinter.CENTER)
     placement = customtkinter.StringVar(value="Center")  # set initial value
     combobox = customtkinter.CTkOptionMenu(master=app,
-                                     values=["Left", "Center", "Right", "Boxed"],
+                                     values=["Left", "Center", "Right"],
                                      variable=placement, width=200, command=optionmenu_callback)
     combobox.place(relx=0.5, rely=0.53, anchor=tkinter.CENTER)
 
