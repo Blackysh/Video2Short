@@ -19,7 +19,7 @@ customtkinter.set_appearance_mode("Dark")
 customtkinter.set_default_color_theme("blue")
 app = customtkinter.CTk()  # create CTk window like you do with the Tk window
 app.geometry("800x600")
-app.title("EasyShorts")
+app.title("EasyShorts - 16:9 to 9:16")
 app.resizable(False, False)
 
 
@@ -50,10 +50,13 @@ def vidSelectedButtons(video_duration):
     textbox1.place(relx=0.5, rely=0.35, anchor=tkinter.CENTER)
     placement = customtkinter.StringVar(value="Center")  # set initial value
     combobox = customtkinter.CTkOptionMenu(master=app,
-                                     values=["Left", "Center", "Right"],
+                                     values=["Left", "Center", "Right", "Boxed"],
                                      variable=placement, width=200, command=optionmenu_callback)
     combobox.place(relx=0.5, rely=0.53, anchor=tkinter.CENTER)
-
+    #label = customtkinter.CTkLabel(master=app, text="If using custom, put pixel count for custom layout after clicking render!")
+    #label.place(relx=0.5, rely=0.91, anchor=tkinter.CENTER)
+    label = customtkinter.CTkLabel(master=app, text="Do not close if window says not responding, its processing the video!")
+    label.place(relx=0.5, rely=0.95, anchor=tkinter.CENTER)
     button = customtkinter.CTkButton(master=app, width=250, height=52, text="Render", command=exporting)
     button.place(relx = 0.5, rely = 0.8, anchor=tkinter.CENTER)
 
@@ -98,14 +101,18 @@ button.place(relx = 0.5, rely = 0.2, anchor=tkinter.CENTER)
 def exporting():
     starting_value = textbox1.get("0.0", "end")
     ending_value = textbox.get("0.0", "end")
-    print( str(video_duration) + "\n" + str(placement) + "\n" + str(starting_value)  + "\n" +  str(ending_value) + "\n" + str(video))
+    print( str(video_duration) + "\n" + str(placement) + "\n" + str(starting_value)  + "\n" +  str(ending_value) + "\n" + str(video) )
 
 
     if float(starting_value) > float(ending_value) or float(ending_value) > float(video_duration) or float(starting_value) == float(ending_value) or float(starting_value) == float(video_duration):
         messagebox.showerror('Wrong Values', 'Error: Recheck values, the values are wrong.')
-
-
     else:
-        start(placement=str(placement), starting_valu=float(starting_value), ending_valu=float(ending_value))
+        if placement == "Custom":
+            dialog = customtkinter.CTkInputDialog(text="Margin pixel count from left", title="Custom Layout")
+            placement == dialog.get_input()
+            start(placement=str(placement), starting_valu=float(starting_value), ending_valu=float(ending_value))
+
+        else:
+            start(placement=str(placement), starting_valu=float(starting_value), ending_valu=float(ending_value))
 
 app.mainloop()

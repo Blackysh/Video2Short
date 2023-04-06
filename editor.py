@@ -35,6 +35,9 @@ def start(placement, starting_valu, ending_valu):
     elif placement == "Boxed":
         Boxed(video, video_width)
     
+    else: # Custom layout
+        print(placement)
+
 
 
     return
@@ -64,6 +67,15 @@ def Right(video, video_width):
     return
 
 
-#TODO - Add boxed layout
 def Boxed(video, video_width):
-    return
+    x = w / 9
+    total_margin = x * 16
+    total_margin = total_margin - h
+    half_margin = int(total_margin / 2)
+
+    video = video.margin(top=half_margin, bottom=half_margin) 
+    video.write_videofile("Final.mp4") 
+    return 
+
+
+
