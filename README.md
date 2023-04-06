@@ -1,4 +1,6 @@
 # Video2Short
+Download a release from Releases section, unzip and run the main exe file.
+
 
 ![Image](screenshot-showcase.png)
 
@@ -15,9 +17,7 @@ Convert an existing video to an short by selecting a layout. Supports Youtube an
 
 ## Getting Started <a name = "getting_started"></a>
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
-
-### If there is a release, download the file from releases and extract it. Run the main exe file to start the program.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See 
 
 Clone this project, and run [pip install -r requirements.txt] and run main.py.      
         
