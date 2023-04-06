@@ -1,5 +1,8 @@
 # Video2Short
 
+![Image](screenshot-showcase.png)
+
+
 ## Table of Contents
 
 - [About](#about)
