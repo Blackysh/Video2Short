@@ -1,1 +1,1 @@
-start /d "main/" video2short.exe
+start /d "main/" main.exe
