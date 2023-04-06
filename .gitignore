@@ -3,3 +3,6 @@ __pycache__/editor.cpython-311.pyc
 __pycache__/render.cpython-311.pyc
 __pycache__/objTracking.cpython-311.pyc
 Final.mp4
+build/
+dist/
+main.spec

@@ -1,6 +1,4 @@
 # Video2Short
-Download a release from Releases section, unzip and run the main exe file.
-
 
 ![Image](screenshot-showcase.png)
 
@@ -21,6 +19,4 @@ These instructions will get you a copy of the project up and running on your loc
 
 Clone this project, and run [pip install -r requirements.txt] and run main.py.      
         
-
-
 
