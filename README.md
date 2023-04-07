@@ -1,16 +1,10 @@
 # Video2Short
+Convert an existing video to an short by selecting a layout. Supports Youtube and local videos.        
 
-![Image](screenshot-showcase.png)
+Download the latest exe for windows from releases and run the file to have your video edited!         
+For non-windows operating systems, Run it using python directly. See - [Getting Started](#getting_started)    
 
-
-## Table of Contents
-
-- [About](#about)
-- [Getting Started](#getting_started)
-
-## About <a name = "about"></a>
-
-Convert an existing video to an short by selecting a layout. Supports Youtube and local videos.
+![Image](screenshot-showcase.png)   
 
 
 ## Getting Started <a name = "getting_started"></a>
