@@ -1,1 +1,1 @@
-start /d "main/" main.exe
+start main/main.exe

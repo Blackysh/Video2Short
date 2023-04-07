@@ -6,7 +6,6 @@ from pytube import YouTube
 from tkinter import filedialog as fd
 from moviepy import *
 from moviepy.editor import *
-import editor
 from editor import start
 from tkinter import messagebox
 

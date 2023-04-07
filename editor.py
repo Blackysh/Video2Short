@@ -1,7 +1,7 @@
-from moviepy.editor import *
-from moviepy.video import *
+from moviepy.editor import VideoFileClip
 from moviepy.video.fx.all import crop
-
+from moviepy.video.fx.all import margin
+import os
 
 video = "TEMP/video.mp4"
 
